@@ -1,0 +1,12 @@
+/var/*
+!/var/labels
+/vendor
+/public/*
+!/public/fileadmin
+/public/fileadmin/*
+!/public/fileadmin/.htaccess
+!/public/.htaccess
+!/public/typo3conf
+/public/typo3conf/*
+!/public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php

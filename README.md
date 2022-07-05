@@ -27,3 +27,29 @@ ddev composer init \
     --type=project \
     --no-interaction
 ```
+
+### 4. Require minimal packages
+
+```bash
+ddev composer require \
+    php:~8.1 \
+    vlucas/phpdotenv \
+    typo3/minimal \
+    typo3/cms-introduction
+```
+
+Create `.gitignore` in root directory.
+
+```
+/var/*
+!/var/labels
+/vendor
+/public/*
+!/public/fileadmin
+/public/fileadmin/*
+!/public/.htaccess
+!/public/typo3conf
+/public/typo3conf/*
+!/public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php
+```
