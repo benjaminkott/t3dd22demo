@@ -18,3 +18,12 @@ ddev config \
 ```bash
 ddev start
 ```
+
+### 3. Initialize Composer Project
+
+```bash
+ddev composer init \
+    --name=bk2k/t3dd22demo \
+    --type=project \
+    --no-interaction
+```
