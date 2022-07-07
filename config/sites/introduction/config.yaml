@@ -1,4 +1,6 @@
-base: /
+websiteTitle: 'TYPO3 Developer Days Demo 2022'
+rootPageId: 1
+base: '%env(SITE_BASE)%'
 errorHandling:
   -
     errorCode: 404
@@ -45,5 +47,3 @@ languages:
     fallbackType: fallback
     fallbacks: '1,0'
     flag: de
-rootPageId: 1
-websiteTitle: 'TYPO3 Introduction Package'

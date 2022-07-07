@@ -112,6 +112,7 @@ TYPO3_MAIL_TRANSPORT_SMTP_SERVER="localhost:1025"
 TYPO3_MAIL_TRANSPORT_SENDMAIL_COMMAND="/usr/local/bin/mailhog sendmail test@example.org --smtp-addr 127.0.0.1:1025"
 
 # Site
+SITE_BASE="https://t3dd22demo.ddev.site/"
 TYPO3_SYS_TRUSTED_HOSTS_PATTERN=".*(\\.)?ddev\\..*"
 
 # Install Tool Password (password)
