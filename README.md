@@ -136,6 +136,76 @@ Setup Extensions
 ddev exec vendor/bin/typo3 extension:setup
 ```
 
+
+## BONUS: Adding auto update to the project
+
+Since this is a small project, we want to keep it updated with no effort. 
+We do not expect any issues here we opt-in to react instead of checking 
+each update manually.
+
+It is set to run every Monday at 10 am and will commit the changes
+to the defined default branch of our repository.
+
+`.github/workflows/autoupdate.yaml` 
+
+```yaml
+name: Auto Update
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup PHP 8.1
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Use Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: |
+          composer install --no-progress --no-suggest --no-interaction
+
+      - name: Update dependencies
+        run: |
+          composer update --no-progress --no-interaction --with-all-dependencies
+
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
+
+      - name: Commit changes
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+          git config user.name GitHub Action
+          git config user.email action@github.com
+          git add --all .
+          git commit -m "[AUTO UPDATE]"
+          git push
+```
+
 ## Demo Data
 
 ### Export Data
