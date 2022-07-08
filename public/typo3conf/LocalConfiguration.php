@@ -72,13 +72,13 @@ return [
         ],
     ],
     'GFX' => [
-        'processor' => 'GraphicsMagick',
+        'processor' => '<SET VIA ENV>',
         'processor_allowTemporaryMasksAsPng' => false,
         'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
-        'processor_path' => '/usr/bin/',
-        'processor_path_lzw' => '/usr/bin/',
+        'processor_path' => '<SET VIA ENV>',
+        'processor_path_lzw' => '<SET VIA ENV>',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -96,11 +96,11 @@ return [
         ],
     ],
     'MAIL' => [
-        'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailhog sendmail test@example.org --smtp-addr 127.0.0.1:1025',
+        'transport' => '<SET VIA ENV>',
+        'transport_sendmail_command' => '<SET VIA ENV>',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
+        'transport_smtp_server' => '<SET VIA ENV>',
         'transport_smtp_username' => '',
     ],
     'SYS' => [

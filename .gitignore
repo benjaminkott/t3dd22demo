@@ -1,5 +1,6 @@
 /var/*
 !/var/labels
+/ssh/*
 /vendor
 /public/*
 !/public/fileadmin
@@ -11,3 +12,4 @@
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
 .env.local
+!.gitkeep

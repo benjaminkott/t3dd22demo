@@ -137,6 +137,58 @@ Setup Extensions
 ddev exec vendor/bin/typo3 extension:setup
 ```
 
+### Generate SSH key and copy it to the server
+
+Make sure to backup your ssh keypair.
+
+```bash
+# Generate SSH Key Pair
+ddev exec ssh-keygen -t rsa -b 4096 -f ./ssh/id_rsa
+
+# Copy it to the server
+ddev exec ssh-copy-id -i ./ssh/id_rsa <username>@<host>
+
+# Test the connection
+ddev exec ssh -i ./ssh/id_rsa <username>@<host>
+```
+
+### Prepare Database
+
+Prepare your remote Database and upload the dump from the local project.
+
+### Download Deployer and save it to bin
+
+We are downloading deployer, so it does not 
+mix up with our existing dependencies.
+
+```bash
+ddev exec curl -LO https://github.com/deployphp/deployer/releases/download/v7.0.0-rc.8/deployer.phar
+ddev exec mkdir ./bin
+ddev exec mv deployer.phar ./bin/dep
+ddev exec chmod +x ./bin/dep
+```
+
+Deploying only the code for the first deployment, create
+the folder structure, upload current assets and adjust the config.
+
+```bash
+# 1. Deploy Code
+ddev exec SSH_HOST=<host> SSH_USER=<username> bin/dep deploy:data
+# 2. Upload current assets
+ddev exec SSH_HOST=<host> SSH_USER=<username> bin/dep upload:fileadmin
+# 3. Edit configuration
+ddev exec SSH_HOST=<host> SSH_USER=<username> bin/dep ssh
+vim .env.local
+```
+
+### Connect the domain
+
+To validate the results, connect the production domain or use a temporary one.
+Now run the full deployment with the `SSH_HOST` set to the domain that is public facing.
+
+```bash
+ddev exec SSH_HOST=<public-facing-domain> SSH_USER=<username> bin/dep deploy
+```
 
 ## BONUS: Adding auto update to the project
 
