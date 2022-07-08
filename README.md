@@ -190,6 +190,66 @@ Now run the full deployment with the `SSH_HOST` set to the domain that is public
 ddev exec SSH_HOST=<public-facing-domain> SSH_USER=<username> bin/dep deploy
 ```
 
+## Adding deployment to main branch
+
+Since the manual process is not really helpful on a day to day basis.
+We can utilize Github Actions to run the deployment for us.
+
+
+```yaml
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deployment-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP 8.1
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Use Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: |
+          composer install --no-dev --no-progress --optimize-autoloader
+
+      - name: Deploy
+        uses: deployphp/action@v1
+        with:
+          private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          dep: deploy
+          deployer-version: "7.0.0-rc.8"
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+```
+
+
 ## BONUS: Adding auto update to the project
 
 Since this is a small project, we want to keep it updated with no effort. 
