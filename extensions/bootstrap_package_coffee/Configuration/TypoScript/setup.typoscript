@@ -1,0 +1,13 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:bootstrap_package_coffee/Resources/Public/Scss/Theme/theme.scss
+    }
+}

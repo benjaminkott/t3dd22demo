@@ -1,0 +1,16 @@
+{
+    "name": "bk2k/bootstrap-package-coffee",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://github.com/benjaminkott",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^12.0"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bootstrap_package_coffee"
+        }
+    }
+}

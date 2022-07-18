@@ -1,11 +1,18 @@
 {
     "name": "bk2k/t3dd22demo",
     "type": "project",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "extensions/*"
+        }
+    ],
     "require": {
         "php": "~8.1",
         "vlucas/phpdotenv": "^5.4",
         "typo3/minimal": "^11.5",
-        "typo3/cms-introduction": "^4.4"
+        "bk2k/bootstrap-package-coffee": "dev-main",
+        "bk2k/bootstrap-package": "^12.0"
     },
     "config": {
         "allow-plugins": {

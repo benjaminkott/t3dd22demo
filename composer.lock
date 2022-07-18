@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d3cf62df05e7ff185c57aa558890884",
+    "content-hash": "943c9a640b16b31bde26a98bd46fc176",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -168,6 +168,34 @@
                 }
             ],
             "time": "2022-04-22T12:43:14+00:00"
+        },
+        {
+            "name": "bk2k/bootstrap-package-coffee",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "extensions/bootstrap_package_coffee",
+                "reference": "41c4aad7341650613d5a95e96fc95d70d4ba9f93"
+            },
+            "require": {
+                "bk2k/bootstrap-package": "^12.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "bootstrap_package_coffee"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "homepage": "https://github.com/benjaminkott",
+            "keywords": [
+                "TYPO3 CMS"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "christian-riesen/base32",
@@ -5566,64 +5594,6 @@
             "time": "2022-07-12T09:04:24+00:00"
         },
         {
-            "name": "typo3/cms-felogin",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/felogin.git",
-                "reference": "c93171db88c4bf1a38ce8d18ec052459f0690004"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/felogin/zipball/c93171db88c4bf1a38ce8d18ec052459f0690004",
-                "reference": "c93171db88c4bf1a38ce8d18ec052459f0690004",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "Package": {
-                        "partOfFactoryDefault": true
-                    },
-                    "extension-key": "felogin"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\FrontendLogin\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A template-based plugin to log in Website Users in the Frontend",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-felogin/11.5/en-us",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
             "name": "typo3/cms-filelist",
             "version": "v11.5.13",
             "source": {
@@ -5674,56 +5644,6 @@
                 }
             ],
             "description": "Listing of files in the directory",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
-            "name": "typo3/cms-filemetadata",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/filemetadata.git",
-                "reference": "e448608a59a344f236925d7213a7262a341fa2fe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/filemetadata/zipball/e448608a59a344f236925d7213a7262a341fa2fe",
-                "reference": "e448608a59a344f236925d7213a7262a341fa2fe",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "extension-key": "filemetadata"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Add advanced metadata to File.",
             "homepage": "https://typo3.org",
             "support": {
                 "chat": "https://typo3.org/help",
@@ -5798,70 +5718,6 @@
             "time": "2022-07-12T09:04:24+00:00"
         },
         {
-            "name": "typo3/cms-form",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/form.git",
-                "reference": "3e7c7f10fbea26f5322219a9c10ea4b952611c08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/form/zipball/3e7c7f10fbea26f5322219a9c10ea4b952611c08",
-                "reference": "3e7c7f10fbea26f5322219a9c10ea4b952611c08",
-                "shasum": ""
-            },
-            "require": {
-                "psr/http-message": "^1.0",
-                "symfony/expression-language": "^5.4",
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "suggest": {
-                "typo3/cms-filelist": "Listing of files in the directory",
-                "typo3/cms-impexp": "Import and Export of records from TYPO3 in a custom serialized format (.T3D) for data exchange with other TYPO3 systems."
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "Package": {
-                        "partOfFactoryDefault": true
-                    },
-                    "extension-key": "form"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\Form\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Form Library, Plugin and Editor",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-form/11.5/en-us",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
             "name": "typo3/cms-frontend",
             "version": "v11.5.13",
             "source": {
@@ -5922,122 +5778,6 @@
             "support": {
                 "chat": "https://typo3.org/help",
                 "docs": "https://docs.typo3.org",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
-            "name": "typo3/cms-impexp",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/impexp.git",
-                "reference": "aebc5ddd8efe408361c62a206af2bac15ba326dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/impexp/zipball/aebc5ddd8efe408361c62a206af2bac15ba326dc",
-                "reference": "aebc5ddd8efe408361c62a206af2bac15ba326dc",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "Package": {
-                        "partOfFactoryDefault": true
-                    },
-                    "extension-key": "impexp"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\Impexp\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Import and Export of records from TYPO3 in a custom serialized format (.T3D) for data exchange with other TYPO3 systems.",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-impexp/11.5/en-us/",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
-            "name": "typo3/cms-indexed-search",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/indexed_search.git",
-                "reference": "96f63ec3993711483d7e72ea8a8cfb7ba9cba550"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/indexed_search/zipball/96f63ec3993711483d7e72ea8a8cfb7ba9cba550",
-                "reference": "96f63ec3993711483d7e72ea8a8cfb7ba9cba550",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "suggest": {
-                "typo3/cms-scheduler": "For garbage collection of search statistics"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "extension-key": "indexed_search"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\IndexedSearch\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Indexed Search Engine for TYPO3 pages, PDF-files, Word-files, HTML and text files. Provides a backend module for statistics of the indexer and a frontend plugin.",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org/c/typo3/cms-indexed-search/11.5/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
@@ -6110,75 +5850,6 @@
                 "source": "https://github.com/typo3/typo3"
             },
             "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
-            "name": "typo3/cms-introduction",
-            "version": "4.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfTYPO3/introduction.git",
-                "reference": "49bc89b5bb2f8004d26951f0cba58fda7a1bc100"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfTYPO3/introduction/zipball/49bc89b5bb2f8004d26951f0cba58fda7a1bc100",
-                "reference": "49bc89b5bb2f8004d26951f0cba58fda7a1bc100",
-                "shasum": ""
-            },
-            "require": {
-                "bk2k/bootstrap-package": "^12.0.3",
-                "ext-pdo": "*",
-                "php": ">=7.4.1",
-                "typo3/cms-core": "^11.5",
-                "typo3/cms-extensionmanager": "^11.5",
-                "typo3/cms-felogin": "^11.5",
-                "typo3/cms-filemetadata": "^11.5",
-                "typo3/cms-form": "^11.5",
-                "typo3/cms-impexp": "^11.5",
-                "typo3/cms-indexed-search": "^11.5",
-                "typo3/cms-tstemplate": "^11.5",
-                "typo3/minimal": "^11.4"
-            },
-            "require-dev": {
-                "helhum/typo3-console": "^7.0.2",
-                "typo3/cms-belog": "^11.5",
-                "typo3/cms-lowlevel": "^11.5",
-                "typo3/cms-scheduler": "^11.5",
-                "typo3/cms-setup": "^11.5"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4.x-dev"
-                },
-                "typo3/cms": {
-                    "app-dir": ".build",
-                    "extension-key": "introduction",
-                    "web-dir": ".build/public"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\Introduction\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "The Official TYPO3 Introduction Package",
-            "homepage": "https://typo3.org",
-            "keywords": [
-                "TYPO3 CMS",
-                "bootstrap",
-                "introduction"
-            ],
-            "support": {
-                "docs": "https://docs.typo3.org/p/typo3/cms-introduction/master/en-us/",
-                "issues": "https://github.com/FriendsOfTYPO3/introduction/issues",
-                "source": "https://github.com/FriendsOfTYPO3/introduction"
-            },
-            "time": "2021-10-05T11:11:45+00:00"
         },
         {
             "name": "typo3/cms-recordlist",
@@ -6356,64 +6027,6 @@
             "support": {
                 "chat": "https://typo3.org/help",
                 "docs": "https://docs.typo3.org/c/typo3/cms-seo/11.5/en-us",
-                "issues": "https://forge.typo3.org",
-                "source": "https://github.com/typo3/typo3"
-            },
-            "time": "2022-07-12T09:04:24+00:00"
-        },
-        {
-            "name": "typo3/cms-tstemplate",
-            "version": "v11.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TYPO3-CMS/tstemplate.git",
-                "reference": "898706fa52d0f1080ec6516951f0ca4919779f2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/898706fa52d0f1080ec6516951f0ca4919779f2e",
-                "reference": "898706fa52d0f1080ec6516951f0ca4919779f2e",
-                "shasum": ""
-            },
-            "require": {
-                "typo3/cms-core": "11.5.13"
-            },
-            "conflict": {
-                "typo3/cms": "*"
-            },
-            "type": "typo3-cms-framework",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "11.5.x-dev"
-                },
-                "typo3/cms": {
-                    "Package": {
-                        "partOfFactoryDefault": true
-                    },
-                    "extension-key": "tstemplate"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TYPO3\\CMS\\Tstemplate\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "TYPO3 Core Team",
-                    "email": "typo3cms@typo3.org",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Framework for management of TypoScript template records for the CMS frontend.",
-            "homepage": "https://typo3.org",
-            "support": {
-                "chat": "https://typo3.org/help",
-                "docs": "https://docs.typo3.org",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
@@ -6805,7 +6418,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bk2k/bootstrap-package-coffee": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

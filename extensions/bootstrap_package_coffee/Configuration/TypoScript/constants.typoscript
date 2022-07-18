@@ -1,0 +1,18 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:bootstrap_package_coffee/Resources/Public/Images/logo.svg
+        fileInverted = EXT:bootstrap_package_coffee/Resources/Public/Images/logo-inverted.svg
+        height = 70
+        width = 202
+        alt = Saint Francisco Coffe Co.
+        linktitle = Saint Francisco Coffe Co.
+    }
+}
