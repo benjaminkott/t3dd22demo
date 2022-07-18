@@ -454,7 +454,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PRIVATE_ACCESS_TOKEN }}
 
       - name: Setup PHP 8.1
         uses: shivammathur/setup-php@v2
