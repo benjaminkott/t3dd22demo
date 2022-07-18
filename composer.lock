@@ -62,16 +62,16 @@
         },
         {
             "name": "bk2k/bootstrap-package",
-            "version": "12.0.5",
+            "version": "12.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benjaminkott/bootstrap_package.git",
-                "reference": "16734ba6dff0950f135d5aa5e35254a8278ef6a7"
+                "reference": "622f623aa994efc4b9971459d9edead2ca9a92c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/16734ba6dff0950f135d5aa5e35254a8278ef6a7",
-                "reference": "16734ba6dff0950f135d5aa5e35254a8278ef6a7",
+                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/622f623aa994efc4b9971459d9edead2ca9a92c4",
+                "reference": "622f623aa994efc4b9971459d9edead2ca9a92c4",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                 "ext-pdo": "*",
                 "ext-simplexml": "*",
                 "php": ">=7.2.0",
-                "scssphp/scssphp": "^1.8.1",
+                "scssphp/scssphp": "^1.7.0",
                 "typo3/cms-backend": "^10.4 || ^11.5 || 11.*.*@dev",
                 "typo3/cms-core": "^10.4 || ^11.5 || 11.*.*@dev",
                 "typo3/cms-extbase": "^10.4 || ^11.5 || 11.*.*@dev",
@@ -159,7 +159,7 @@
             ],
             "support": {
                 "issues": "https://github.com/benjaminkott/bootstrap_package/issues",
-                "source": "https://github.com/benjaminkott/bootstrap_package/tree/12.0.5"
+                "source": "https://github.com/benjaminkott/bootstrap_package/tree/12.0.4"
             },
             "funding": [
                 {
@@ -167,7 +167,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-04-22T12:43:14+00:00"
+            "time": "2021-11-19T12:35:43+00:00"
         },
         {
             "name": "christian-riesen/base32",
