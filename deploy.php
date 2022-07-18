@@ -101,6 +101,19 @@ EOF
     }
     run('[ -L {{application_public}} ] || {{bin/symlink}} {{current_path}}/public {{application_public}}');
 
+    // Protect deployment folders
+    set('hostnameCondition', str_replace('.', '.\\', get('hostname')));
+    info('Create .htaccess in application folder to protect directory structure.');
+    run(<<<EOF
+cd {{application_path}};
+echo "
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^{{ hostnameCondition }}$ [NC]
+RewriteRule ^(.*)$ https://{{ hostname }}/$1 [L,R=301]
+" > .htaccess
+EOF
+);
+
     // Create .env.local if not exists
     if (test('[ ! -f {{deploy_path}}/shared/.env.local ]')) {
         info('Create .env.local from .env.example');
