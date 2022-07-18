@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup PHP 8.1
         uses: shivammathur/setup-php@v2
@@ -48,8 +46,8 @@ jobs:
       - name: Commit changes
         if: steps.git-check.outputs.modified == 'true'
         run: |
-          git config user.name GitHub Action
-          git config user.email action@github.com
-          git add --all .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
           git commit -m "[AUTO UPDATE]"
           git push
