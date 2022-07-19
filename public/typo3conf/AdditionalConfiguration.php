@@ -28,3 +28,25 @@ $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_sendmail_command'] = getenv('TYPO
 // System
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = getenv('TYPO3_SYS_TRUSTED_HOSTS_PATTERN');
 $GLOBALS['TYPO3_CONF_VARS']['BE']['installToolPassword'] = getenv('TYPO3_BE_INSTALL_TOOL_PASSWORD');
+
+// Caching
+if (!function_exists('__setCacheBackend')) {
+    function __setCacheBackend($className, $cacheName, $lifetime = NULL) {
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$cacheName]['backend'] = $className;
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$cacheName]['options'] = [];
+        if (null !== $lifetime) {
+            $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations'][$cacheName]['options']['defaultLifetime'] = $lifetime;
+        }
+    }
+}
+$__apcEnabled = ini_get('apc.enabled') == true;
+$__apcExtensionLoaded = extension_loaded('apcu');
+$__backendCacheClassName = \TYPO3\CMS\Core\Cache\Backend\FileBackend::class;
+if (PHP_SAPI !== 'cli' && $__apcExtensionLoaded && $__apcEnabled) {
+    $__backendCacheClassName = \TYPO3\CMS\Core\Cache\Backend\ApcuBackend::class;
+}
+__setCacheBackend($__backendCacheClassName, 'hash');
+__setCacheBackend($__backendCacheClassName, 'pages');
+__setCacheBackend($__backendCacheClassName, 'pagesection', 2592000);
+__setCacheBackend($__backendCacheClassName, 'rootline', 2592000);
+__setCacheBackend($__backendCacheClassName, 'imagesizes', 0);
