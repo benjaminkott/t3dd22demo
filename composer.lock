@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "943c9a640b16b31bde26a98bd46fc176",
+    "content-hash": "c196cd3ba080cf9052718c1f8e7689ac",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4930,6 +4930,95 @@
             "time": "2022-06-26T16:35:04+00:00"
         },
         {
+            "name": "symfony/var-dumper",
+            "version": "v5.4.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "af52239a330fafd192c773795520dc2dd62b5657"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/af52239a330fafd192c773795520dc2dd62b5657",
+                "reference": "af52239a330fafd192c773795520dc2dd62b5657",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php80": "^1.16"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<5.4.3",
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "^4.4|^5.0|^6.0",
+                "symfony/process": "^4.4|^5.0|^6.0",
+                "symfony/uid": "^5.1|^6.0",
+                "twig/twig": "^2.13|^3.0.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.9"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-21T10:24:18+00:00"
+        },
+        {
             "name": "symfony/var-exporter",
             "version": "v6.1.1",
             "source": {
@@ -5137,6 +5226,72 @@
                 "source": "https://github.com/TYPO3/class-alias-loader/tree/v1.1.3"
             },
             "time": "2020-05-24T13:03:22+00:00"
+        },
+        {
+            "name": "typo3/cms-adminpanel",
+            "version": "v11.5.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/adminpanel.git",
+                "reference": "5bc10d50cba34e36b7171372f5f30ba4d7de5dc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/adminpanel/zipball/5bc10d50cba34e36b7171372f5f30ba4d7de5dc4",
+                "reference": "5bc10d50cba34e36b7171372f5f30ba4d7de5dc4",
+                "shasum": ""
+            },
+            "require": {
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0",
+                "psr/http-server-middleware": "^1.0",
+                "symfony/var-dumper": "^5.4",
+                "typo3/cms-backend": "11.5.13",
+                "typo3/cms-core": "11.5.13",
+                "typo3/cms-fluid": "11.5.13",
+                "typo3/cms-frontend": "11.5.13",
+                "typo3fluid/fluid": "^2.7.1"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.5.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "adminpanel"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Adminpanel\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The TYPO3 admin panel provides a panel with additional functionality in the frontend (Debugging, Caching, Preview...)",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-adminpanel/11.5/en-us/",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2022-07-12T09:04:24+00:00"
         },
         {
             "name": "typo3/cms-backend",
@@ -5852,6 +6007,65 @@
             "time": "2022-07-12T09:04:24+00:00"
         },
         {
+            "name": "typo3/cms-lowlevel",
+            "version": "v11.5.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/lowlevel.git",
+                "reference": "aee35df00a88813451f72dda53aa345479ccb9f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/lowlevel/zipball/aee35df00a88813451f72dda53aa345479ccb9f8",
+                "reference": "aee35df00a88813451f72dda53aa345479ccb9f8",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "11.5.13"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.5.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "serviceProvider": "TYPO3\\CMS\\Lowlevel\\ServiceProvider",
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "lowlevel"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Lowlevel\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Enables the 'Config' and 'DB Check' modules for technical analysis of the system. This includes raw database search, checking relations, counting pages and records etc.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2022-07-12T09:04:24+00:00"
+        },
+        {
             "name": "typo3/cms-recordlist",
             "version": "v11.5.13",
             "source": {
@@ -6027,6 +6241,64 @@
             "support": {
                 "chat": "https://typo3.org/help",
                 "docs": "https://docs.typo3.org/c/typo3/cms-seo/11.5/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2022-07-12T09:04:24+00:00"
+        },
+        {
+            "name": "typo3/cms-tstemplate",
+            "version": "v11.5.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/tstemplate.git",
+                "reference": "898706fa52d0f1080ec6516951f0ca4919779f2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/898706fa52d0f1080ec6516951f0ca4919779f2e",
+                "reference": "898706fa52d0f1080ec6516951f0ca4919779f2e",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "11.5.13"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "11.5.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "tstemplate"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Tstemplate\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Framework for management of TypoScript template records for the CMS frontend.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
