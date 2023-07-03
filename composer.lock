@@ -62,16 +62,16 @@
         },
         {
             "name": "bk2k/bootstrap-package",
-            "version": "12.0.9",
+            "version": "12.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benjaminkott/bootstrap_package.git",
-                "reference": "f0bec8a503f295ce49b7894e6b5afba99d32c16c"
+                "reference": "e7c038ce35e589b5918b0e43c90d8ebabc49c5bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/f0bec8a503f295ce49b7894e6b5afba99d32c16c",
-                "reference": "f0bec8a503f295ce49b7894e6b5afba99d32c16c",
+                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/e7c038ce35e589b5918b0e43c90d8ebabc49c5bc",
+                "reference": "e7c038ce35e589b5918b0e43c90d8ebabc49c5bc",
                 "shasum": ""
             },
             "require": {
@@ -159,7 +159,7 @@
             ],
             "support": {
                 "issues": "https://github.com/benjaminkott/bootstrap_package/issues",
-                "source": "https://github.com/benjaminkott/bootstrap_package/tree/12.0.9"
+                "source": "https://github.com/benjaminkott/bootstrap_package/tree/12.0.10"
             },
             "funding": [
                 {
@@ -167,7 +167,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-06-26T06:29:09+00:00"
+            "time": "2023-06-30T13:47:27+00:00"
         },
         {
             "name": "bk2k/bootstrap-package-coffee",
@@ -1801,16 +1801,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.22.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c"
+                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
-                "reference": "ec58baf7b3c7f1c81b3b00617c953249fb8cf30c",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/65c39594fbd8c67abfc68bb323f86447bab79cc0",
+                "reference": "65c39594fbd8c67abfc68bb323f86447bab79cc0",
                 "shasum": ""
             },
             "require": {
@@ -1842,9 +1842,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.22.1"
             },
-            "time": "2023-06-01T12:35:21+00:00"
+            "time": "2023-06-29T20:46:06+00:00"
         },
         {
             "name": "psr/cache",
