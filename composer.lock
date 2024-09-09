@@ -308,16 +308,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.14.3",
+            "version": "1.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "fb0d71a7393298a7b232cbf4c8b1f73f3ec3d5af"
+                "reference": "253dca476f70808a5aeed3a47cc2cc88c5cab915"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/fb0d71a7393298a7b232cbf4c8b1f73f3ec3d5af",
-                "reference": "fb0d71a7393298a7b232cbf4c8b1f73f3ec3d5af",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/253dca476f70808a5aeed3a47cc2cc88c5cab915",
+                "reference": "253dca476f70808a5aeed3a47cc2cc88c5cab915",
                 "shasum": ""
             },
             "require": {
@@ -328,11 +328,11 @@
             },
             "require-dev": {
                 "doctrine/cache": "^1.11 || ^2.0",
-                "doctrine/coding-standard": "^9 || ^10",
-                "phpstan/phpstan": "~1.4.10 || ^1.8.0",
+                "doctrine/coding-standard": "^9 || ^12",
+                "phpstan/phpstan": "~1.4.10 || ^1.10.28",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "symfony/cache": "^4.4 || ^5.4 || ^6",
-                "vimeo/psalm": "^4.10"
+                "symfony/cache": "^4.4 || ^5.4 || ^6.4 || ^7",
+                "vimeo/psalm": "^4.30 || ^5.14"
             },
             "suggest": {
                 "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
@@ -378,9 +378,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.14.3"
+                "source": "https://github.com/doctrine/annotations/tree/1.14.4"
             },
-            "time": "2023-02-01T09:20:38+00:00"
+            "time": "2024-09-05T10:15:52+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1808,16 +1808,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.30.0",
+            "version": "1.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "5ceb0e384997db59f38774bf79c2a6134252c08f"
+                "reference": "51b95ec8670af41009e2b2b56873bad96682413e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/5ceb0e384997db59f38774bf79c2a6134252c08f",
-                "reference": "5ceb0e384997db59f38774bf79c2a6134252c08f",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/51b95ec8670af41009e2b2b56873bad96682413e",
+                "reference": "51b95ec8670af41009e2b2b56873bad96682413e",
                 "shasum": ""
             },
             "require": {
@@ -1849,9 +1849,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.30.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.30.1"
             },
-            "time": "2024-08-29T09:54:52+00:00"
+            "time": "2024-09-07T20:13:05+00:00"
         },
         {
             "name": "psr/cache",
